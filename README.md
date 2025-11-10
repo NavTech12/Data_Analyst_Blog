@@ -27,8 +27,9 @@ It includes a landing page, an “About Me” section, and individual posts rela
 
 ---
 
-## 🗂️ Folder Structure
+## 📁 Folder Structure
 
+``` 
 data-analyst-blog/
 │
 ├── index.html # Landing page with list of posts
@@ -44,7 +45,7 @@ data-analyst-blog/
 │ └── img/ # Images and icons
 │
 └── README.md # Project documentation
-
+``` 
 
 ---
 
