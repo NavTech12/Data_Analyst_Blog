@@ -1,0 +1,158 @@
+/* ===============================
+   Color Variables (light theme default)
+   =============================== */
+:root {
+  --bg: #ffffff;
+  --text: #1f2937;      /* dark gray for text */
+  --muted: #6b7280;     /* medium gray for secondary text */
+  --border: #e5e7eb;    /* light gray for borders */
+  --primary: #2563eb;   /* main blue color */
+  --card: #f9fafb;      /* light gray background for cards */
+}
+
+/* ===============================
+   Dark Theme Colors
+   =============================== */
+:root.dark {
+  --bg: #0b1020;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --primary: #60a5fa;
+  --card: #111827;
+}
+
+/* Reset and Base Styles */
+* { box-sizing: border-box; } /* Include padding/border inside element width */
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===============================
+   Utility Classes
+   =============================== */
+.container { width: min(100%, 1100px); margin: 0 auto; padding: 0 16px; }
+
+/* Basic button styles */
+.btn {
+  display: inline-block; border: 1px solid var(--border); padding: 10px 14px;
+  border-radius: 10px; text-decoration: none; color: var(--text); background: var(--card);
+}
+
+/* Hover effect for buttons. That means, what happens when the cursor is on the object */
+.btn:hover { border-color: var(--primary); }
+
+/* CTA (Call To Action) button */
+.btn.cta { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* Button used for light/dark theme switch */
+.theme-btn { margin-left: 8px; }
+
+/* ===============================
+   Header / Navigation Bar
+   =============================== */
+.site-header { border-bottom: 1px solid var(--border); background: var(--bg); 
+  position: sticky;  /* stays visible while scrolling */
+  top: 0; z-index: 10; }
+
+.nav { display: flex; align-items: center; gap: 16px; padding: 12px 0; }
+
+.logo { font-weight: 700; color: var(--text); text-decoration: none; }
+
+/* Navigation links */
+.nav-links { display: flex; list-style: none; gap: 12px; margin: 0 0 0 auto; padding: 0; }
+.nav-links a { text-decoration: none; color: var(--text); padding: 8px 10px; border-radius: 8px; }
+
+/* Highlight the current page */
+.nav-links a[aria-current="page"] { background: var(--card); border: 1px solid var(--border); }
+
+/* Button to open/close navigation (mobile) */
+.nav-toggle { display: none; background: transparent; border: 0; cursor: pointer; margin-left: auto; }
+
+.nav-toggle-bar { display: block; width: 22px; height: 2px; background: var(--text); margin: 4px 0; }
+
+/* ===============================
+   Hero Section
+   =============================== */
+.hero { padding: 40px 0; text-align: center; }
+.hero h1 { font-size: 32px; margin: 0 0 8px; }
+
+/* ===============================
+   Posts List
+   =============================== */
+.posts-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 24px 0 12px; }
+
+/* Search box for posts */
+#postSearch {
+  width: 280px; max-width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text);
+}
+
+/* Grid layout for post cards */
+.post-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; list-style: none; padding: 0; margin: 0; }
+
+/* Individual post card */
+.post-card { border: 1px solid var(--border); border-radius: 14px; background: var(--card); overflow: hidden; transition: transform .12s ease; }
+
+/* Small lift effect on hover */
+.post-card:hover { transform: translateY(-2px); }
+.post-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+.post-content { padding: 12px 14px; }
+.post-content h3 { margin: 6px 0 8px; font-size: 18px; }
+.post-meta { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
+.post-excerpt { margin: 0; color: var(--text); }
+
+/* ===============================
+   Post Content / Prose
+   =============================== */
+.prose { max-width: 780px; padding: 24px 0; }
+
+/* Post cover image */
+.post-header img.post-cover { width: 100%; border-radius: 12px; margin: 14px 0; }
+
+/* Headings and code blocks */
+.prose h1, .prose h2, .prose h3 { line-height: 1.2; }
+
+.prose pre { background: #0b1020; color: #e5e7eb; padding: 12px; border-radius: 10px; overflow: auto; }
+
+/* ===============================
+   About Section
+   =============================== */
+.about .avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); }
+
+/* ===============================
+   Footer
+   =============================== */
+.site-footer { border-top: 1px solid var(--border); margin-top: 24px; padding: 16px 0; color: var(--muted); }
+
+/* ===============================
+   Accessibility
+   =============================== */
+/* Elements hidden visually but still accessible for screen readers */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* ===============================
+   Responsive Design
+   =============================== */
+@media (max-width: 900px) {
+  .post-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  /* Show mobile menu button */
+  .nav-toggle { display: block; }
+
+  /* Hide nav links by default and show as dropdown */
+  .nav-links { display: none; flex-direction: column; align-items: flex-start; background: var(--bg);
+               position: absolute; right: 16px; top: 60px; border: 1px solid var(--border); border-radius: 12px; padding: 8px; }
+  
+  /* Show menu when toggled */
+  .nav-links.show { display: flex; }
+
+  /* Single column for small screens */
+  .post-list { grid-template-columns: 1fr; }
+}

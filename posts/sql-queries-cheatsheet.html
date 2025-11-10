@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SQL Queries: A Handy Cheat Sheet</title>
+<link rel="stylesheet" href="../assets/css/styles.css" />
+<script defer src="../assets/js/script.js"></script>
+</head><body>
+<header class="site-header"><nav class="container nav">
+  <a class="logo" href="../index.html">Data Analyst Blog</a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
+  <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About me</a></li></ul>
+  <button id="themeToggle" class="btn theme-btn" aria-label="Toggle dark mode">🌓</button>
+</nav></header>
+<main class="container prose">
+  <article>
+    <header class="post-header">
+      <h1>SQL Queries: A Handy Cheat Sheet</h1>
+      <p class="post-meta">Published on <time datetime="2025-11-08">Nov 8, 2025</time> · Tags: SQL</p>
+      <img class="post-cover" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&q=80&auto=format&fit=crop" alt="Code on terminal" />
+    </header>
+<pre><code>-- Count orders per customer
+SELECT customer_id, COUNT(*) AS orders
+FROM orders
+GROUP BY customer_id
+ORDER BY orders DESC;
+
+-- Rolling 7-day average
+SELECT
+  date,
+  value,
+  AVG(value) OVER (ORDER BY date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) AS avg7
+FROM metrics;
+</code></pre>
+    <p>Copy, tweak, and reuse. Add your own snippets over time.</p>
+  </article>
+  <nav class="post-nav"><a class="btn" href="../index.html">← Back to Home</a></nav>
+</main>
+<footer class="site-footer"><div class="container"><p>© <span id="year"></span> Data Analyst Blog</p></div></footer>
+</body></html>

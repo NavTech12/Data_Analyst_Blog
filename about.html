@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Declares the document type and language -->
+  <meta charset="UTF-8" />
+  <!-- Ensures the page is properly scaled on all devices (responsive design). The same that has been done in index.html -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About · Data Analyst Blog</title>
+
+  <!-- Link to the external CSS stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Loads the JavaScript file after the page is parsed -->
+  <script defer src="assets/js/script.js"></script>
+</head>
+
+<body>
+  <!-- Header section: contains the main navigation bar -->
+  <header class="site-header">
+    <nav class="container nav">
+      <!-- Site logo that links back to the homepage -->
+      <a class="logo" href="index.html">Data Analyst Blog</a>
+
+      <!-- Button for mobile navigation menu (hamburger icon) -->      
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <!-- Three bars that represent the menu icon -->
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <ul class="nav-links">
+
+        <!-- Home page link -->
+        <li><a href="index.html">Home</a></li>
+        <!-- Current page link (About page is active) -->
+        <li><a href="about.html" aria-current="page">About me</a></li>
+      </ul>
+
+      <!-- Button to switch between dark and light mode -->
+      <button id="themeToggle" class="btn theme-btn" aria-label="Toggle dark mode">🌓</button>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main class="container prose">
+    <section class="about">
+
+      <!-- Author image -->
+      <img class="avatar" src="assets/img/Alvaro_Photo_Author.jpg" alt="Photo of the author" />
+
+      <!-- Main heading, a simple one -->
+      <h1>About me</h1>
+
+      <!-- Short personal introduction about myself as a Data Analyst -->
+      <p>Hi! I’m a <strong>Data Analyst</strong> focused on turning raw data into actionable insights. I use SQL, Python, and BI tools to help teams make better decisions.</p>
+
+      <!-- Section describing the topics covered in the blog -->
+      <h2>What I write about</h2>
+      <ul>
+        <li>SQL fundamentals and patterns I use daily</li>
+        <li>Exploratory Data Analysis (EDA) and data cleaning</li>
+        <li>Dashboards, KPIs, and communicating insights</li>
+      </ul>
+
+      <!-- Section listing the main tools and technologies used -->
+      <h2>Stack</h2>
+      <p>Python (pandas), SQL, Excel, Power BI/Tableau, Git/GitHub.</p>
+      
+      <!-- External links to social profiles -->
+      <p>Find me on 
+        <a href="https://www.linkedin.com/in/alvaroarellanonavarro/" target="_blank" rel="noopener">LinkedIn</a> 
+        or 
+        <a href="https://github.com/NavTech12" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <!-- Displays the current year using JavaScript -->
+      <p>© <span id="year"></span> Data Analyst Blog</p>
+    </div>
+  </footer>
+</body>
+</html>

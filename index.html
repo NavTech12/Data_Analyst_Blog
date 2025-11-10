@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- Declares this document as an HTML5 file -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Makes the layout responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Analyst Blog</title>
+
+  <!-- Short description for search engines -->
+  <meta name="description" content="A beginner-friendly blog about Data Analytics: SQL, EDA, visualization, and more." />
+
+  <!-- Links the external CSS file for styling -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Loads the JavaScript file (defer means it runs after the page loads) -->  
+  <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <nav class="container nav">
+      <!-- Logo or blog title linking to the homepage -->
+      <a class="logo" href="index.html">Data Analyst Blog</a>
+
+      <!-- Button for opening the menu on small screens (hamburger menu) -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+     <!-- Navigation links -->
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+      </ul>
+
+      <!-- Button to switch between dark and light mode. You can find the logic of themeToggle function in script.js file -->
+      <button id="themeToggle" class="btn theme-btn" aria-label="Toggle dark mode">🌓</button>
+    </nav>
+  </header>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main>
+    <!-- Hero section: main welcome message -->
+    <section class="hero container">
+      <h1>Learn Data Analytics from the ground up</h1>
+      <p>Your go-to place for SQL, Exploratory Data Analysis, and practical tooling for Data Analysts.</p>
+      <a class="btn cta" href="#posts">Read the posts ↓</a>
+    </section>
+
+    <!-- Blog posts section -->
+    <section class="container" id="posts">
+      <div class="posts-header">
+        <h2>Latest posts</h2>
+
+        <!-- Simple search input to filter posts by title or tags -->
+        <label for="postSearch" class="sr-only">Search posts</label>
+        <input type="search" id="postSearch" placeholder="Search posts by title or tag..." />
+      </div>
+
+      <!-- List of blog post cards -->
+      <ul class="post-list" id="postList">
+        <li class="post-card" data-tags="beginner sql">
+          <a href="posts/data-analyst-beginners-guide.html">
+            <!-- Post image -->
+            <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=1200&q=80&auto=format&fit=crop" alt="Laptop with charts on screen" loading="lazy" />
+            <!-- Post title and details -->
+            <div class="post-content">
+              <h3>Data Analyst: A Beginner’s Guide</h3>
+              <p class="post-meta">Published: <time datetime="2025-11-01">Nov 1, 2025</time> · Tags: Beginner, Career</p>
+              <p class="post-excerpt">What a Data Analyst actually does, essential skills (SQL, EDA, visualization), and a practical learning plan.</p>
+            </div>
+          </a>
+        </li>
+
+        <!-- === Post 2 === -->
+        <li class="post-card" data-tags="eda python visualization">
+          <a href="posts/exploratory-data-analysis-tips.html">
+            <img src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=1200&q=80&auto=format&fit=crop" alt="Scatter plots on a notebook" loading="lazy" />
+            <div class="post-content">
+              <h3>Quick Tips for Exploratory Data Analysis (EDA)</h3>
+              <p class="post-meta">Published: <time datetime="2025-11-05">Nov 5, 2025</time> · Tags: EDA, Python</p>
+              <p class="post-excerpt">A bite-sized checklist for understanding your dataset fast: distributions, missing values, outliers, and correlations.</p>
+            </div>
+          </a>
+        </li>
+
+        <!-- === Post 3 === -->
+        <li class="post-card" data-tags="sql queries cheatsheet">
+          <a href="posts/sql-queries-cheatsheet.html">
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&q=80&auto=format&fit=crop" alt="Terminal window showing code" loading="lazy" />
+            <div class="post-content">
+              <h3>SQL Queries: A Handy Cheat Sheet</h3>
+              <p class="post-meta">Published: <time datetime="2025-11-08">Nov 8, 2025</time> · Tags: SQL</p>
+              <p class="post-excerpt">SELECT, WHERE, GROUP BY, JOINs, and window functions—snippets you’ll reuse every day.</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- The current year is added dynamically with JavaScript -->
+      <p>© <span id="year"></span> Data Analyst Blog · Built with HTML, CSS &amp; JavaScript · Deployed on GitHub Pages</p>
+    </div>
+  </footer>
+</body>
+</html>
