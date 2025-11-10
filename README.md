@@ -7,8 +7,8 @@ This project is built **from scratch** using only **HTML, CSS, and JavaScript**,
 
 ## 🚀 Demo
 
-🔗 **Live site:** [https://NavTech12.github.io/data-analyst-blog/](https://your-username.github.io/data-analyst-blog/)  
-🔗 **Repository:** [https://github.com/NavTech12/data-analyst-blog](https://github.com/your-username/data-analyst-blog)
+🔗 **Live site:** [https://navtech12.github.io/Data_Analyst_Blog/](https://navtech12.github.io/Data_Analyst_Blog/)  
+🔗 **Repository:** [https://github.com/NavTech12/Data_Analyst_Blog](https://github.com/NavTech12/Data_Analyst_Blog)
 
 ---
 
@@ -80,7 +80,7 @@ If you want to preview the site on your computer:
 
 1. Clone the repository  
    ```bash
-   git clone https://github.com/your-username/data-analyst-blog.git
+   git clone https://github.com/NavTech12/data_analytics_projects.git
    cd data-analyst-blog
 2. Open the project folder in Visual Studio Code.
 3. Install the Live Server extension (by Ritwick Dey).
@@ -97,7 +97,7 @@ The website is deployed using GitHub Pages:
 3. Choose main branch and / (root) folder.
 4. Save — GitHub Pages will publish your site automatically.
 5. Wait a few minutes and access your blog at:
-https://your-username.github.io/data-analyst-blog/
+https://navtech12.github.io/Data_Analyst_Blog/
 
 🧑‍💻 Author
 
