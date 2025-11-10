@@ -102,9 +102,8 @@ https://navtech12.github.io/Data_Analyst_Blog/
 
 🧑‍💻 Author
 
-Name: Álvaro Arellano Navarro
-LinkedIn: https://www.linkedin.com/in/alvaroarellanonavarro/
-GitHub: https://github.com/NavTech12
+**Álvaro Arellano Navarro**  
+[LinkedIn](https://www.linkedin.com/in/alvaroarellanonavarro/) · [GitHub](https://github.com/NavTech12)
 
 💬 Acknowledgments
 
